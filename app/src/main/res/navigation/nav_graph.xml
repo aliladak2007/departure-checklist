@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/eventListFragment"
-        android:name="com.example.departurechecklist.ui.events.EventListFragment"
+        android:name="com.aliladak.departurechecklist.ui.events.EventListFragment"
         android:label="@string/event_list_title">
         <action
             android:id="@+id/action_eventListFragment_to_checklistFragment"
@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/checklistFragment"
-        android:name="com.example.departurechecklist.ui.checklist.ChecklistFragment"
+        android:name="com.aliladak.departurechecklist.ui.checklist.ChecklistFragment"
         android:label="@string/checklist_screen_title">
         <argument
             android:name="eventId"
