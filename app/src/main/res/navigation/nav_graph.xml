@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/eventListFragment">
+
+    <fragment
+        android:id="@+id/eventListFragment"
+        android:name="com.example.departurechecklist.ui.events.EventListFragment"
+        android:label="@string/event_list_title">
+        <action
+            android:id="@+id/action_eventListFragment_to_checklistFragment"
+            app:destination="@id/checklistFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/checklistFragment"
+        android:name="com.example.departurechecklist.ui.checklist.ChecklistFragment"
+        android:label="@string/checklist_screen_title">
+        <argument
+            android:name="eventId"
+            android:defaultValue="-1L"
+            app:argType="long" />
+        <argument
+            android:name="eventTitle"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="eventStartMillis"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <argument
+            android:name="checklistId"
+            android:defaultValue="-1L"
+            app:argType="long" />
+    </fragment>
+</navigation>
